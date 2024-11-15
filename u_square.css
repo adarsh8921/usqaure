@@ -87,7 +87,7 @@ body {
     border: none;
     border-radius: 25px;
     background: #FFB51B;
-    color: #fff;
+    color: #000000;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -97,6 +97,7 @@ body {
 /* Button hover effect */
 .cta-button:hover {
     background-color: #e69500;
+    color: #000;
 }
 
 /* Navbar links */
@@ -143,9 +144,92 @@ body {
         padding: 1rem;
     }
 
-    .navbar ul.show {
-        display: flex; /* Show menu when toggled */
+    /* Mobile menu toggle with enhanced design */
+.navbar ul.show {
+    display: flex; /* Show menu when toggled */
+    flex-direction: column; /* Stack items vertically */
+    background: linear-gradient(135deg, #FFB51B, #FF803B); /* Gradient background for vibrancy */
+    width: 100%;
+    padding: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for a modern feel */
+    border-radius: 0 0 15px 15px; /* Smooth bottom corners */
+    overflow: hidden; /* Ensure clean edges */
+    animation: slideDown 0.4s ease-out; /* Add animation when menu appears */
+}
+
+.navbar ul.show li {
+    width: 100%; /* Full width for list items */
+    margin: 0; /* Reset margins */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Transparent dividers */
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul.show li:last-child {
+    border-bottom: none; /* Remove divider for the last item */
+}
+
+.navbar ul.show li a {
+    display: block; /* Full-width clickable area */
+    padding: 14px 25px; /* More generous spacing */
+    font-size: 18px; /* Larger, more legible text */
+    font-weight: 600; /* Bold text for better visibility */
+    color: white; /* Bright text for contrast */
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar ul.show li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Subtle highlight effect */
+    transform: scale(1.05); /* Slight zoom effect */
+    border-radius: 5px; /* Rounded hover effect */
+}
+
+/* Mobile toggle button design */
+/* Mobile toggle button design (smaller size) */
+.menu-toggle {
+    display: block;
+    font-size: 24px; /* Slightly smaller font */
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FFB51B, #FF803B); /* Match menu gradient */
+    padding: 10px 14px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #FF803B; /* Solid color for hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%; /* Position below navbar */
+        left: 0;
+        z-index: 1000;
     }
+}
+
+/* Animation for menu appearance */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
     .navbar ul li {
         margin: 0.5rem 0;
@@ -155,6 +239,7 @@ body {
         display: block;
     }
 
+    
     /* Responsive font sizes */
     .image-heading {
         font-size: 24px;
