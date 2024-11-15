@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U_Square</title>
+    <link rel="stylesheet" href="u_square.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="logo">
+        <img src="assets/Screenshot 2024-08-23 222652 2.png" alt="" class="logo-img">
+    </a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <ul id="nav-links">
+        <li><a href="#facebook"><img src="assets/facebook.png" alt="" class="nav-icon"> </a></li>
+        <li><a href="#x"><img src="assets/x.png" alt="" class="nav-icon"> </a></li>
+        <li><a href="#whatsapp"><img src="assets/whatsapp.png" alt="" class="nav-icon"> </a></li>
+        <li><a href="https://www.instagram.com/usquare.clothing/"><img src="assets/instagram.png" alt="" class="nav-icon"> </a></li>
+    </ul>
+</div>
+
+ <!-- Centered image section -->
+ <div class="centered-image-container">
+    <img src="assets/Group 55.png" alt="" class="center-image">
+    
+</div>
+ 
+
+    <!-- Heading, Sentence, and Button Below the Image -->
+    <div class="image-text">
+        <h1 class="image-heading">
+            <span class="part-one">We're Building</span> 
+            <span class="part-two">Something Amazing for You!</span>
+        </h1>
+        <p class="image-paragraph">Our team is hard at work crafting an exceptional experience. We'll be back soon with<br> 
+            something fantastic! In the meantime, follow us on social media for the latest updates and 
+            <br>sneak peeks into what’s coming next!</p>
+    
+        <!-- Centered Button Below the Paragraph -->
+        <button class="cta-button">Contact Us</button>
+    </div>
+
+
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-links").classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
